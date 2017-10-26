@@ -41,6 +41,27 @@ nd.zeros((3, 4))
 ]
 ```
 
+```{.python .input  n=3}
+import numpy as np
+```
+
+```{.python .input  n=4}
+np.zeros((3, 4))
+```
+
+```{.json .output n=4}
+[
+ {
+  "data": {
+   "text/plain": "array([[ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.]])"
+  },
+  "execution_count": 4,
+  "metadata": {},
+  "output_type": "execute_result"
+ }
+]
+```
+
 类似的，我们可以创建数组每个元素被初始化成1。
 
 ```{.python .input  n=3}
@@ -61,10 +82,58 @@ x
 ]
 ```
 
+```{.python .input  n=5}
+x = np.ones((3,4))
+x
+```
+
+```{.json .output n=5}
+[
+ {
+  "data": {
+   "text/plain": "array([[ 1.,  1.,  1.,  1.],\n       [ 1.,  1.,  1.,  1.],\n       [ 1.,  1.,  1.,  1.]])"
+  },
+  "execution_count": 5,
+  "metadata": {},
+  "output_type": "execute_result"
+ }
+]
+```
+
 或者从python的数组直接构造
 
-```{.python .input  n=4}
+```{.python .input  n=6}
 nd.array([[1,2],[2,3]])
+```
+
+```{.json .output n=6}
+[
+ {
+  "data": {
+   "text/plain": "\n[[ 1.  2.]\n [ 2.  3.]]\n<NDArray 2x2 @cpu(0)>"
+  },
+  "execution_count": 6,
+  "metadata": {},
+  "output_type": "execute_result"
+ }
+]
+```
+
+```{.python .input  n=7}
+np.array([[1,2],[2,3]])
+```
+
+```{.json .output n=7}
+[
+ {
+  "data": {
+   "text/plain": "array([[1, 2],\n       [2, 3]])"
+  },
+  "execution_count": 7,
+  "metadata": {},
+  "output_type": "execute_result"
+ }
+]
 ```
 
 我们经常需要创建随机数组，就是说每个元素的值都是随机采样而来，这个经常被用来初始化模型参数。下面创建数组，它的元素服从均值0方差1的正态分布。
