@@ -4,4 +4,3 @@ data/
 build/
 *.json
 *.params
-mxnet_practice/resnet34_fcn/model/
