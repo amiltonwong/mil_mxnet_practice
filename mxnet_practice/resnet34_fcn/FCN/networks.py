@@ -346,6 +346,6 @@ def Classifier(raw_feat, label, num_classes, grad_scale=1.0, workspace=1024, pre
 
 sym = mx.sym.load('resnet-34-symbol.json')
 
-#mx.viz.plot_network(sym, shape={'data': (1, 3, 320, 320)}, node_attrs={'fixedsize':'false'}).view('res34')
+mx.viz.plot_network(sym, shape={'data': (1, 3, 320, 320)}, node_attrs={'fixedsize':'false'}).view('res34')
 
 #mx.viz.plot_network(fcn34(), shape={'data':  (1, 3, 320, 320), 'label': (1, 1, 320/8, 320/8)}, node_attrs={'fixedsize': 'false'}).view('fcn34')
